@@ -1,6 +1,6 @@
 import { Source_Sans_Pro, DM_Sans } from "next/font/google";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 
 const sourceSansPro = Source_Sans_Pro({
   subsets: ["latin"],
@@ -13,6 +13,10 @@ const dmsans = DM_Sans({
 });
 
 export default function HolaDok() {
+  useEffect(() => {
+    document.title = "Challenge 2 | Holadok hero section";
+  }, []);
+
   return (
     <main className="bg-white min-h-screen antialiased md:bg-[url('/holadok/background.png')] bg-no-repeat bg-contain bg-[right_8rem_top_1rem]">
       {/* Background start */}
