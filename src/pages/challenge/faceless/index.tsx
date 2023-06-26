@@ -1,7 +1,7 @@
 import { Source_Sans_Pro } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 
 type Props = {};
 
@@ -11,8 +11,14 @@ const sourceSansPro = Source_Sans_Pro({
 });
 
 export default function Faceless({}: Props) {
+  useEffect(() => {
+    document.title = "Challenge 05 | Faceless Auth";
+  }, []);
+
   return (
-    <main className={`min-h-screen flex ${sourceSansPro.className}`}>
+    <main
+      className={`min-h-screen antialiased flex ${sourceSansPro.className}`}
+    >
       <div className="w-full md:w-1/4 bg-white px-[40px] py-[60px]">
         <Image src={"/faceless/logo.png"} alt="Logo" width={80} height={80} />
         <div className="mt-[40px]">
