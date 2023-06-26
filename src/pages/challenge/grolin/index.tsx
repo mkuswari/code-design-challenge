@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import Sidebar from "./components/sidebar";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -103,9 +104,12 @@ export default function Grolin() {
               <div className="text-center mt-[30px]">
                 <p className="text-base font-semibold text-white/60">
                   Don't have an account?{" "}
-                  <a href="" className="text-[#FC728B]">
+                  <Link
+                    href="/challenge/grolin/register"
+                    className="text-[#FC728B]"
+                  >
                     Create one!
-                  </a>
+                  </Link>
                 </p>
               </div>
             </form>

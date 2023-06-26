@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import Image from "next/image";
 import React from "react";
 import Sidebar from "./components/sidebar";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -90,9 +91,9 @@ export default function Register() {
               <div className="text-center mt-[30px]">
                 <p className="text-base font-semibold text-white/60">
                   Have an account?{" "}
-                  <a href="" className="text-[#FC728B]">
+                  <Link href="/challenge/grolin" className="text-[#FC728B]">
                     Login!
-                  </a>
+                  </Link>
                 </p>
               </div>
             </form>
